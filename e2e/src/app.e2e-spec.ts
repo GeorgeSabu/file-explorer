@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to polly-file-sync!');
+    expect(page.getTitleText()).toEqual('Welcome to file-explorer!');
   });
 
   afterEach(async () => {

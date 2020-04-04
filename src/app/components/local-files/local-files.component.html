@@ -1,0 +1,10 @@
+<mat-selection-list #entryComp>
+  <mat-list-item (click)="changeDir({ name: '..', isFile: false, isDirectory: true }, $event)">
+    <mat-icon mat-list-icon style="cursor: pointer;">keyboard_backspace</mat-icon>
+  </mat-list-item>
+  <mat-list-item *ngFor="let entry of entries" (click)="changeDir(entry, $event)" style="cursor: pointer;">
+    <mat-icon mat-list-icon *ngIf="entry.isDirectory">folder</mat-icon>
+    <mat-icon mat-list-icon *ngIf="entry.isFile">note</mat-icon>
+    {{entry.name}}
+  </mat-list-item>
+</mat-selection-list>
